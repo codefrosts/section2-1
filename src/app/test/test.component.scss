@@ -1,0 +1,20 @@
+.calculator {
+  &__container {
+    display: grid;
+    grid-template-columns: 200px auto 300px;
+    grid-template-areas: 'input choice result';
+  }
+
+  &__input {
+    grid-area: input;
+  }
+
+  &__choice {
+    min-width: 100px;
+    grid-area: choice;
+  }
+
+  &__result {
+    grid-area: result;
+  }
+}

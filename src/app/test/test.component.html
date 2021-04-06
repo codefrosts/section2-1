@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+  <div class="calculator__container">
+    <div class="calculator__input">
+      <input type="text" formControlName="data" appOnlyNumber>
+    </div>
+    <div class="calculator__choice">
+      <select formControlName="option">
+        <option *ngFor="let option of options" [value]="option.value">{{option.label}}</option>
+      </select>
+    </div>
+    <div class="calculator__result">
+      {{form.get('result').value}}
+    </div>
+  </div>
+</form>
